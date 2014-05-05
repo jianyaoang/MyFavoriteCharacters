@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "RootViewController.h"
+#import "UserInputViewController.h"
 
 @implementation AppDelegate
 
@@ -17,6 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UINavigationController *navigationController = (UINavigationController*)self.window.rootViewController;
+    UserInputViewController *uvc = navigationController.viewControllers.firstObject;
+    uvc.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 

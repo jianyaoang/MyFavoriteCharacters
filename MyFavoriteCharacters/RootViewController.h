@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface RootViewController : UIViewController
-
+@property NSManagedObjectContext *managedObjectContext;
 @end

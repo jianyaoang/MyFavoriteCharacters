@@ -25,6 +25,8 @@
 		4193C2561918232F00886DE6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4193C2551918232F00886DE6 /* Storyboard.storyboard */; };
 		4193C259191823F500886DE6 /* FavoriteCharacters.m in Sources */ = {isa = PBXBuildFile; fileRef = 4193C258191823F500886DE6 /* FavoriteCharacters.m */; };
 		4193C25C191824B300886DE6 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4193C25B191824B300886DE6 /* RootViewController.m */; };
+		4193C25F191827A800886DE6 /* CharactersTableTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4193C25E191827A800886DE6 /* CharactersTableTableViewCell.m */; };
+		4193C26219182A5E00886DE6 /* UserInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4193C26119182A5E00886DE6 /* UserInputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		4193C258191823F500886DE6 /* FavoriteCharacters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCharacters.m; sourceTree = "<group>"; };
 		4193C25A191824B300886DE6 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4193C25B191824B300886DE6 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		4193C25D191827A800886DE6 /* CharactersTableTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharactersTableTableViewCell.h; sourceTree = "<group>"; };
+		4193C25E191827A800886DE6 /* CharactersTableTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharactersTableTableViewCell.m; sourceTree = "<group>"; };
+		4193C26019182A5E00886DE6 /* UserInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInputViewController.h; sourceTree = "<group>"; };
+		4193C26119182A5E00886DE6 /* UserInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +133,11 @@
 				4193C2321918231100886DE6 /* AppDelegate.m */,
 				4193C25A191824B300886DE6 /* RootViewController.h */,
 				4193C25B191824B300886DE6 /* RootViewController.m */,
+				4193C26019182A5E00886DE6 /* UserInputViewController.h */,
+				4193C26119182A5E00886DE6 /* UserInputViewController.m */,
 				4193C2551918232F00886DE6 /* Storyboard.storyboard */,
+				4193C25D191827A800886DE6 /* CharactersTableTableViewCell.h */,
+				4193C25E191827A800886DE6 /* CharactersTableTableViewCell.m */,
 				4193C2371918231100886DE6 /* Images.xcassets */,
 				4193C2341918231100886DE6 /* MyFavoriteCharacters.xcdatamodeld */,
 				4193C257191823F500886DE6 /* FavoriteCharacters.h */,
@@ -264,8 +274,10 @@
 			files = (
 				4193C2331918231100886DE6 /* AppDelegate.m in Sources */,
 				4193C2361918231100886DE6 /* MyFavoriteCharacters.xcdatamodeld in Sources */,
+				4193C25F191827A800886DE6 /* CharactersTableTableViewCell.m in Sources */,
 				4193C22F1918231100886DE6 /* main.m in Sources */,
 				4193C259191823F500886DE6 /* FavoriteCharacters.m in Sources */,
+				4193C26219182A5E00886DE6 /* UserInputViewController.m in Sources */,
 				4193C25C191824B300886DE6 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
