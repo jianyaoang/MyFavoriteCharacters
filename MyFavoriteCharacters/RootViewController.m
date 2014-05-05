@@ -7,9 +7,12 @@
 //
 
 #import "RootViewController.h"
-
+#import "FavoriteCharacters.h"
 @interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
-
+{
+    NSMutableArray *characters;
+    IBOutlet UITableView *charactersTableView;
+}
 @end
 
 @implementation RootViewController
@@ -26,16 +29,42 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    characters = [NSMutableArray new];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self load];
+}
+
+-(void)load
+{
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"FavoriteCharacters"];
+    NSSortDescriptor *sortDescriptorName = [[NSSortDescriptor alloc] initWithKey:@"character" ascending:YES];
+    NSArray *sortDescriptor = [NSArray arrayWithObject:sortDescriptorName];
+    request.sortDescriptors = sortDescriptor;
+    
+    NSArray *charactersDetails = [self.managedObjectContext executeFetchRequest:request error:nil];
+    
+    if (charactersDetails.count)
+    {
+        characters = [NSMutableArray arrayWithArray:charactersDetails];
+    }
+    
+    [charactersTableView reloadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return characters.count;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    FavoriteCharacters *favoriteCharacters = characters[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CharactersCellID"];
+    cell.textLabel.text = favoriteCharacters.character;
+    cell.detailTextLabel.text = favoriteCharacters.powers;
     return cell;
 }
 
