@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "RootViewController.h"
+#import "CharactersProfileViewController.h"
 #import "UserInputViewController.h"
 
 @implementation AppDelegate

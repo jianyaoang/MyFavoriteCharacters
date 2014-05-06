@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="407" y="-29"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Characters Profile View Controller-->
         <scene sceneID="Ov5-z5-iJk">
             <objects>
-                <viewController id="OKb-Ht-Bcb" customClass="RootViewController" sceneMemberID="viewController">
+                <viewController id="OKb-Ht-Bcb" customClass="CharactersProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="feH-qW-dV2"/>
                         <viewControllerLayoutGuide type="bottom" id="nbg-wN-ckG"/>

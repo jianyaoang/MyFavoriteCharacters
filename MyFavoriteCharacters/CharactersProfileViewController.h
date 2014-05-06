@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController
+@interface CharactersProfileViewController : UIViewController <NSFetchedResultsControllerDelegate>
+
 @property NSManagedObjectContext *managedObjectContext;
+@property NSFetchedResultsController *fetchedResultsController;
 @end

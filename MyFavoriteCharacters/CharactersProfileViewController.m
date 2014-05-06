@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Jian Yao Ang. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "CharactersProfileViewController.h"
 #import "FavoriteCharacters.h"
 #import "AppDelegate.h"
-@interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface CharactersProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *characters;
     IBOutlet UITableView *charactersTableView;
 }
 @end
 
-@implementation RootViewController
+@implementation CharactersProfileViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,6 +64,25 @@
     cell.detailTextLabel.text = favoriteCharacters.powers;
     cell.detailTextLabel.numberOfLines = 0;
     return cell;
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSManagedObjectContext *managedObjectContext = [self.fetchedResultsController managedObjectContext];
+        [managedObjectContext deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+    }
+}
+
+-(NSString*)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"Remove Character";
 }
 
 
