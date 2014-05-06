@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "FavoriteCharacters.h"
+#import "AppDelegate.h"
 @interface RootViewController () <UITableViewDataSource, UITableViewDelegate>
 {
     NSMutableArray *characters;
@@ -30,10 +31,6 @@
 {
     [super viewDidLoad];
     characters = [NSMutableArray new];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
     [self load];
 }
 
@@ -65,6 +62,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CharactersCellID"];
     cell.textLabel.text = favoriteCharacters.character;
     cell.detailTextLabel.text = favoriteCharacters.powers;
+    cell.detailTextLabel.numberOfLines = 0;
     return cell;
 }
 
